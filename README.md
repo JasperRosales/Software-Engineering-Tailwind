@@ -22,3 +22,8 @@ npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch
 
 # Use Convinient Naming Convensions like ch1-title-text, ch2-img-container, etc..
 # DO NOT TOUCH THE OUTPUT.CSS!!!!
+
+always check by doing git pull or sync 
+```
+git pull
+```
