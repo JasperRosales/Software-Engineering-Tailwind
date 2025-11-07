@@ -1,0 +1,186 @@
+@theme ch4 {
+  --color-bg-ch4: #111827;        /* dark background */
+  --color-surface-ch4: #1f2937;   /* lighter panel */
+  --color-accent-ch4: #818cf8;    /* indigo / violet */
+  --color-primary-ch4: #ffffff;   /* main text */
+  --color-secondary-ch4: #9ca3af; /* muted text */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-ch4 text-primary-ch4 font-sans;
+  }
+}
+
+@layer components.ch4 {
+  .ch4-header {
+    @apply sticky top-0 z-50 border-b border-accent-ch4/40 shadow-md backdrop-blur-md bg-surface-ch4;
+  }
+
+  .ch4-header-inner {
+    @apply relative max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4;
+  }
+
+  .ch4-brand {
+    @apply text-xl sm:text-2xl font-bold text-primary-ch4;
+  }
+
+  .ch4-nav {
+    @apply hidden lg:flex gap-4 xl:gap-6;
+  }
+
+  .ch4-nav a {
+    @apply text-primary-ch4 hover:text-accent-ch4 transition-colors text-sm sm:text-base;
+  }
+
+  .ch4-menu {
+    @apply hidden;
+  }
+
+  .ch4-menu-btn {
+    @apply flex flex-col justify-between w-6 h-6 cursor-pointer lg:hidden z-50;
+  }
+
+  .ch4-bar {
+    @apply block h-0.5 w-full bg-primary-ch4 transition-all duration-300;
+  }
+
+  .ch4-mobile-nav {
+    @apply hidden absolute top-full left-0 w-full bg-surface-ch4 flex-col space-y-2 sm:space-y-3 py-4 px-6 rounded-b-lg shadow-lg lg:hidden;
+  }
+
+  .ch4-menu:checked ~ .ch4-mobile-nav {
+    @apply flex;
+  }
+
+  .ch4-main {
+    @apply bg-bg-ch4 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32;
+  }
+
+  .ch4-title {
+    @apply text-4xl sm:text-4xl md:text-6xl font-bold text-primary-ch4 mb-2;
+  }
+
+  .ch4-heading {
+    @apply text-lg sm:text-sm md:text-xl text-secondary-ch4 mb-1;
+  }
+
+  .ch4-obj {
+    @apply text-sm sm:text-2xl md:text-2xl font-bold text-primary-ch4 mt-12 mb-8
+  }
+
+  .ch4-subtext {
+    @apply text-base sm:text-sm md:text-lg text-secondary-ch4 mb-8 sm:mb-12;
+  }
+
+  .ch4-grid {
+    @apply grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4 ;
+  }
+
+  .ch4-feature {
+    @apply bg-surface-ch4 p-4 sm:p-6 rounded-xl shadow-lg text-center transition-all hover:scale-[1.02];
+  }
+
+  .ch4-icon {
+    @apply w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-full;
+  }
+
+  .ch4-icon-orange {
+    @apply bg-orange-500;
+  }
+
+  .ch4-icon-violet {
+    @apply bg-violet-500;
+  }
+
+  .ch4-icon-purple {
+    @apply bg-indigo-500;
+  }
+
+  .ch4-feature-title {
+    @apply font-semibold text-base sm:text-lg md:text-xl text-primary-ch4 mb-1 sm:mb-2;
+  }
+
+  .ch4-feature-text {
+    @apply text-sm sm:text-base text-secondary-ch4;
+  }
+
+
+  .ch4-accordion-section {
+    @apply text-center;
+  }
+
+  .ch4-accordion-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary-ch4 mb-6;
+  }
+
+  .ch4-accordion {
+    @apply space-y-4;
+  }
+
+  .ch4-accordion-item {
+    @apply border border-gray-700 rounded-lg overflow-hidden;
+  }
+
+  .ch4-accordion-label {
+    @apply flex justify-between items-center cursor-pointer py-4 px-3 bg-surface-ch4 hover:bg-gray-700 transition sm:text-base md:text-lg lg:text-xl xl:text-xl text-primary-ch4 font-medium;
+  }
+
+  .ch4-accordion-icon {
+    @apply w-5 h-5 transition-transform duration-300 peer-checked:rotate-45;
+  }
+
+  .ch4-accordion-content {
+    @apply max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-500 bg-bg-ch4 px-3 py-2 text-secondary-ch4 sm:text-sm md:text-base lg:text-lg xl:text-lg;
+  }
+
+  .ch4-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+
+  .ch4-section-title {
+    @apply text-3xl font-bold text-primary-ch4 mb-8 text-center;
+  }
+
+  .ch4-grid {
+    @apply grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2;
+  }
+
+  .ch4-card {
+    @apply bg-surface-ch4 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow;
+  }
+
+  .ch4-card-text {
+    @apply text-secondary-ch4;
+  }
+
+  .ch4-card-span-full {
+    @apply sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2;
+  }
+  
+
+  .ch4-footer {
+    @apply sticky bottom-0 z-50 border-t border-accent-ch4/40 shadow-md backdrop-blur-md bg-surface-ch4 ;
+  }
+
+  .ch4-footer-inner {
+    @apply max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center px-6 py-4 gap-4;
+  }
+
+  .ch4-footer-nav {
+    @apply flex flex-wrap justify-center sm:justify-start gap-4;
+  }
+
+  .ch4-footer-link {
+    @apply text-primary-ch4 hover:text-accent-ch4 transition-colors text-sm sm:text-base;
+  }
+
+  .ch4-footer-copy {
+    @apply text-secondary-ch4 text-sm sm:text-base text-center sm:text-left;
+  }
+
+  
+}
+
+
+

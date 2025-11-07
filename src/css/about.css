@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@layer components.about {
+  .about-main {
+    @apply bg-bg min-h-screen flex flex-col items-center justify-center px-6 py-16;
+  }
+
+  .about-container {
+    @apply max-w-6xl w-full text-center;
+  }
+
+  .about-title {
+    @apply text-3xl md:text-5xl font-extrabold text-[#3a2f1b] mb-6;
+  }
+
+  .about-return {
+    @apply inline-block mb-10 text-primary font-semibold hover:underline transition-colors;
+  }
+
+  .card-container {
+    @apply grid gap-8 justify-items-center grid-cols-[repeat(auto-fit,minmax(250px,1fr))] ;
+  }
+
+  .card {
+    @apply relative w-full max-w-xs h-80 perspective-[1000px];
+  }
+
+  .card-inner {
+    @apply relative w-full h-full hidden md:block transform-3d [transition:transform_0.8s];
+  }
+
+  .card:hover .card-inner {
+    @apply transform-[rotateY(180deg)];
+  }
+
+  .card-title{
+    @apply text-2xl md:text-2xl font-extrabold text-[#3a2f1b] mt-2 mb-3;
+  }
+
+  .card-text{
+    @apply text-sm  md:text-sm text-shadow-2xs leading-relaxed text-[#3a2f1b];
+  }
+
+  .card-front,
+  .card-back {
+    @apply absolute w-full h-full rounded-2xl shadow-lg border border-accent/40 overflow-hidden backface-hidden;
+  }
+
+  .card-front {
+    @apply bg-surface;
+  }
+
+  .card-front img {
+    @apply w-full h-full object-cover;
+  }
+
+  .card-back {
+    @apply hidden md:flex flex-col items-center justify-center text-center p-6 transform-[rotateY(180deg)];
+  }
+
+  .card-back h3,
+  .card-back p {
+    @apply md:block;
+  }
+
+  .card-static {
+    @apply flex flex-col md:hidden w-full max-w-xs;
+  }
+
+  .card-static img {
+    @apply w-full h-80 object-cover rounded-2xl shadow-lg border border-accent/40;
+  }
+
+  .card-static h3,
+  .card-static p {
+    @apply hidden;
+  }
+
+  .about-accordion {
+    @apply max-w-3xl mx-auto p-6 bg-bg rounded-2xl shadow-lg border border-accent mt-10;
+  }
+
+  .about-accordion-title {
+    @apply text-3xl font-bold text-center text-primary mb-6;
+  }
+
+  .about-accordion-item {
+    @apply border-b border-accent py-4;
+  }
+
+  .about-accordion-summary {
+    @apply flex justify-between items-center cursor-pointer text-lg font-semibold text-[#3a2f1b] hover:text-primary transition-colors duration-200;
+  }
+
+  .about-accordion-arrow {
+    @apply transition-transform duration-300 group-open:rotate-180 text-primary;
+  }
+
+  .about-accordion-content {
+    @apply mt-3 text-[#3a2f1b]/80 leading-relaxed bg-surface p-4 rounded-lg shadow-inner;
+  }
+}

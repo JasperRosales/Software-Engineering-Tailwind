@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@400..800&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+
+
+@import "./ChapterOne.css";
+@import "./ChapterTwo.css";
+@import "./ChapterThree.css";
+@import "./ChapterFour.css";
+@import "./about.css";
 
 @theme { 
   --color-bg: #fefae0; 
@@ -13,20 +16,6 @@
   --color-primary: #d4a373; 
 
 }
-
-@theme ch4 {
-  --color-bg-ch4: #0d1321;        
-  --color-surface-ch4: #1d2d44;   
-  --color-accent-ch4: #3e5c76;   
-  --color-hover-ch4: #748cab;     
-  --color-primary-ch4: #f0ebd8;   
-
-  --gradient-ch4-1: linear-gradient(135deg, #0d1321 0%, #1d2d44 100%);
-  --gradient-ch4-2: linear-gradient(90deg, #1d2d44 0%, #3e5c76 50%, #f0ebd8 100%);
-  --gradient-ch4-3: linear-gradient(to right, #3e5c76 0%, #748cab 100%);
-}
-
-
 
 
 @layer components.index {
@@ -170,265 +159,12 @@
   .footer-nav   { @apply flex flex-col items-center gap-3 sm:flex-row sm:gap-6 text-center; }
   .footer-sep   { @apply w-3/4 border-t border-accent/40 my-2 md:hidden; }
   .footer-copy  { @apply text-center sm:text-right; }
+
+  .loading-container { @apply bg-bg-ch4 text-primary-ch4 flex flex-col items-center justify-center h-screen overflow-hidden};
+  .loading-title { @apply text-4xl md:text-5xl font-extrabold };
+  .loading-text {@apply text-lg md:text-xl mt-4};
+  .loading-animation { @apply mt-8 w-16 h-16 border-4 border-primary-ch4/30 border-t-primary-ch4 rounded-full};
 }
-
-@layer components.about {
-  .about-main {
-    @apply bg-bg min-h-screen flex flex-col items-center justify-center px-6 py-16;
-  }
-
-  .about-container {
-    @apply max-w-6xl w-full text-center;
-  }
-
-  .about-title {
-    @apply text-3xl md:text-5xl font-extrabold text-[#3a2f1b] mb-6;
-  }
-
-  .about-return {
-    @apply inline-block mb-10 text-primary font-semibold hover:underline transition-colors;
-  }
-
-  .card-container {
-    @apply grid gap-8 justify-items-center grid-cols-[repeat(auto-fit,minmax(250px,1fr))];
-  }
-
-  .card {
-    @apply relative w-full max-w-xs h-80 perspective-[1000px];
-  }
-
-  .card-inner {
-    @apply relative w-full h-full hidden md:block transform-3d [transition:transform_0.8s];
-  }
-
-  .card:hover .card-inner {
-    @apply transform-[rotateY(180deg)];
-  }
-
-  .card-front,
-  .card-back {
-    @apply absolute w-full h-full rounded-2xl shadow-lg border border-accent/40 overflow-hidden backface-hidden;
-  }
-
-  .card-front {
-    @apply bg-surface;
-  }
-
-  .card-front img {
-    @apply w-full h-full object-cover;
-  }
-
-  .card-back {
-    @apply hidden md:flex flex-col items-center justify-center text-center p-6 transform-[rotateY(180deg)];
-  }
-
-  .card-back h3,
-  .card-back p {
-    @apply md:block;
-  }
-
-  .card-static {
-    @apply flex flex-col md:hidden w-full max-w-xs;
-  }
-
-  .card-static img {
-    @apply w-full h-80 object-cover rounded-2xl shadow-lg border border-accent/40;
-  }
-
-  .card-static h3,
-  .card-static p {
-    @apply hidden;
-  }
-}
-
-/* === COMPONENT PLACEHOLDERS: CHAPTER NAMESPACES (EMPTY FOR DEV EXTENSION) ===
-   These are intentionally empty / minimally defined so other devs can safely
-   add styles under the respective namespace without risk of accidental styling
-   on the landing page. Do NOT add concrete style rules here unless they should
-   affect the chapter pages globally. Use these blocks as the starting point.
-*/
-
-@layer components.ch1 {
-.montserrat-regular {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
- /* ────────────── Sections & Containers ────────────── */
-
-.body{
-  @apply bg-[#FFF9E6]
-}
- .ch1-section {
-  @apply max-w-7xl mx-auto space-y-12 mt-12 bg-[#FFF9E6];
-}
-
-.ch1-article {
-  @apply space-y-6 text-justify leading-relaxed text-[#3E352B] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl scroll-mt-10;
-}
-
-/* ────────────── Div Blocks ────────────── */
-.ch1-dv1 {
-  @apply bg-[#B57E4C] py-4 px-6 rounded-md shadow-sm text-center border-b-4 border-[#6A8F7C] text-[#FFF9E6];
-}
-
-.ch1-dv2 {
-  @apply absolute mt-2 p-4 bg-[#B57E4C] rounded-md shadow-lg hidden peer-checked:block min-w-[220px] z-10
-}
-
-.ch1-dv3 {
-  @apply space-y-3 text-justify leading-relaxed text-[#3E352B] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
-}
-
-.ch1-dv4 {
-  @apply space-y-3 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl border-l-4 border-[#6A8F7C] pl-3 sm:pl-4 md:pl-5 lg:pl-6 xl:pl-8;
-}
-
-/* ────────────── Headings (h1–h5) ────────────── */
-.ch1-h1 {
-  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic text-[#3E352B] transform transition-transform duration-300 hover:-translate-y-1;
-}
-
-.ch1-h2 {
-  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold italic underline decoration-[#6A8F7C] underline-offset-3 text-[#3E352B];
-}
-
-.ch1-h3 {
-  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold italic mb-4 border-l-4 border-[#B57E4C] pl-4 text-[#3E352B];
-}
-
-.ch1-h4 {
-  @apply text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic mb-6 border-l-4 border-[#B57E4C] pl-4 text-[#3E352B] scroll-mt-10;
-}
-
-.ch1-h5 {
-  @apply text-center text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold italic text-[#6A8F7C] mt-2;
-}
-
-/* ────────────── Paragraphs & Text ────────────── */
-.ch1-p {
-  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-.ch1-p1 {
-  @apply pl-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-5 mb-5 font-semibold text-[#3E352B];
-}
-
-.ch1-bp {
-  @apply first-letter:text-2xl sm:first-letter:text-3xl md:first-letter:text-4xl lg:first-letter:text-5xl xl:first-letter:text-6xl first-letter:font-bold first-letter:mr-2 first-letter:text-[#B57E4C] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-/* ────────────── Lists (ul, ol, li) ────────────── */
-.ch1-ul1 {
-  @apply list-disc pl-5 sm:pl-6 md:pl-6 lg:pl-6 xl:pl-8 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-.ch1-ul2 {
-  @apply space-y-1 list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-.ch1-ul3 {
-  @apply list-disc pl-6 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-.ch1-ol {
-  @apply list-decimal pl-6 sm:pl-8 md:pl-10 lg:pl-10 xl:pl-12 space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-.ch1-li {
-  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3E352B];
-}
-
-/* ────────────── Buttons & Navigation ────────────── */
-.ch1-btn1 {
-  @apply bg-[#B57E4C] text-[#FFF9E6] font-semibold py-2 px-6 rounded-md shadow
-         hover:bg-[#8f846a] transition-colors duration-200
-         text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer select-none block;
-}
-
-
-.ch1-nav {
-  @apply hover:text-[#523113] hover:underline text-[#3E352B];
-}
-
-
-.ch1-nav1 {
-  @apply text-[#B57E4C] underline font-semibold;
-}
-
-/* ────────────── Images ────────────── */
-.ch1-imgage {
-  @apply w-full max-w-xl lg:max-w-3xl rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mx-auto;
-}
-
-/* ────────────── Back to Top Button ────────────── */
-.ch1-backtotp {
-  @apply fixed bottom-5 right-5 bg-[#B57E4C] hover:bg-[#6A8F7C] text-[#FFF9E6] font-bold py-3 px-4 rounded-full shadow-lg transition-transform duration-300 transform hover:-translate-y-1 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
-}
-
-}
-
-
-
-@layer components.ch2 {
-  /* Chapter 2 placeholder */
-}
-
-@layer components.ch3 {
-  /* Chapter 3 placeholder */
-}
-
-@layer components.ch4 {
-  .ch4-header {
-    @apply sticky top-0 z-50 border-b border-accent-ch4/40 shadow-md backdrop-blur-md;
-    background: linear-gradient(135deg, var(--color-surface-ch4) 0%, var(--color-bg-ch4) 100%);
-  }
-
-  .ch4-header-inner {
-    @apply max-w-7xl mx-auto flex justify-between items-center px-6 py-4;
-  }
-
-  .ch4-brand {
-    @apply font-[Creepster] text-primary-ch4 text-3xl md:text-4xl tracking-widest;
-    text-shadow: 0 0 8px rgba(33, 78, 52, 0.7);
-  }
-
-  .ch4-menu-toggle {
-    @apply hidden;
-  }
-
-  .ch4-menu-btn {
-    @apply sm:hidden flex flex-col gap-1.5 cursor-pointer z-50;
-  }
-
-  .ch4-menu-bar {
-    @apply block w-6 h-0.5 bg-primary-ch4 transition-all;
-  }
-
-  .ch4-nav-links {
-    @apply hidden sm:flex gap-6 text-sm md:text-base font-medium;
-  }
-
-  .ch4-nav-links a {
-    @apply text-primary-ch4 hover:text-hover-ch4 transition-colors duration-200;
-  }
-
-  .ch4-nav-mobile {
-    @apply absolute top-full left-0 w-full border-t border-accent-ch4/30 hidden peer-checked:flex flex-col;
-    background: linear-gradient(180deg, var(--color-surface-ch4) 0%, var(--color-bg-ch4) 100%);
-  }
-
-  .ch4-nav-item {
-    @apply px-6 py-3 text-accent-ch4 hover:text-primary-ch4 transition-colors;
-    background: transparent;
-  }
-
-  
-
-  
-}
-
 
 
 @layer utilities {

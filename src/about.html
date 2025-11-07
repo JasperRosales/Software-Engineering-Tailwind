@@ -16,6 +16,10 @@
 
     <section class="card-container">
 
+      <audio autoplay loop>
+          <source src="/src/assets/bgmutik.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+      </audio>
 
       <article class="card animate__animated animate__fadeInUp">
         <div class="card-inner">
@@ -23,15 +27,20 @@
             <img src="/src/img/about/Jasper.jpg" alt="Jasper Rosales" />
           </div>
           <div class="card-back">
-            <h3>Jasper Rosales</h3>
-            <p>Main + About + Chapter Four</p>
-          </div>
+          <h3 class="card-title">Jasper Rosales</h3>
+          <p class=" card-text">
+            Played a key role in shaping the project’s foundation. 
+            He contributed significantly to the Main, About, and Chapter Four sections, ensuring clarity and creativity throughout.
+          </p>
+        </div>
+
         </div>
 
         <div class="card-static">
           <img src="/src/img/about/Jasper.jpg" alt="Jasper Rosales" />
           <h3>Jasper Rosales</h3>
-          <p>Main + About + Chapter Four</p>
+          <p>   Played a key role in shaping the project’s foundation. 
+            He contributed significantly to the Main, About, and Chapter Four sections, ensuring clarity and creativity throughout.</p>
         </div>
       </article>
 
@@ -42,15 +51,15 @@
             <img src="/src/img/about/aron-caay-2.jpg" alt="John Aron Caay" />
           </div>
           <div class="card-back">
-            <h3>John Aron Caay</h3>
-            <p>Chapter One + CSS</p>
+            <h3 class="card-title">John Aron Caay</h3>
+            <p class="card-text">Contributed to the development and design of Chapter One, focusing on CSS styling and layout enhancements to create a clean, cohesive, and visually appealing structure.</p>
           </div>
         </div>
 
         <div class="card-static">
           <img src="/src/img/about/aron-caay-2.jpg" alt="John Aron Caay" />
-          <h3>John Aron Caay</h3>
-          <p>Chapter One + CSS</p>
+          <h3 class="card-title">John Aron Caay</h3>
+          <p class="card-text">Contributed to the development and design of Chapter One, focusing on CSS styling and layout enhancements to create a clean, cohesive, and visually appealing structure.</p>
         </div>
       </article>
 
@@ -61,15 +70,15 @@
             <img src="/src/img/about/franklin.jpg" alt="Mar Franklin Caraig" />
           </div>
           <div class="card-back">
-            <h3>Mar Franklin Caraig</h3>
-            <p>Chapter Two + CSS</p>
+            <h3 class="card-title">Mar Franklin Caraig</h3>
+            <p class="card-text">Worked on Chapter Two’s design and layout, applying CSS to improve aesthetics, ensure uniform styling, and create a visually engaging section.Chapter Two + CSS</p>
           </div>
         </div>
 
         <div class="card-static">
           <img src="/src/img/about/franklin.jpg" alt="Mar Franklin Caraig" />
-          <h3>Mar Franklin Caraig</h3>
-          <p>Chapter Two + CSS</p>
+          <h3 class="card-title">Mar Franklin Caraig</h3>
+          <p class="card-text">Worked on Chapter Two’s design and layout, applying CSS to improve aesthetics, ensure uniform styling, and create a visually engaging section.</p>
         </div>
       </article>
 
@@ -79,8 +88,8 @@
             <img src="/src/img/about/agquiz.jpg" alt="Nino Joseph Agquiz" />
           </div>
           <div class="card-back">
-            <h3>Nino Joseph Agquiz</h3>
-            <p>Chapter Three + CSS</p>
+            <h3 class="card-title">Nino Joseph Agquiz</h3>
+            <p class="card-text">Played a major role in designing and refining Chapter Three, using CSS to create a polished layout and ensure a seamless, visually engaging presentation.</p>
           </div>
         </div>
 
@@ -90,8 +99,54 @@
           <p>Chapter Three + CSS</p>
         </div>
       </article>
-
     </section>
+
+    <section class="about-accordion">
+      <h1 class="about-accordion-title">Group 1 - Facts</h1>
+
+      <details class="about-accordion-item group animate__animated animate__fadeInUp animate__delay-0s">
+        <summary class="about-accordion-summary">
+          Jasper Rosales
+          <span class="about-accordion-arrow">⌄</span>
+        </summary>
+        <p class="about-accordion-content animate__animated animate__fadeIn animate__delay-0s">
+          Deserve ko po ng isang soft-serve ice-cream na strawberry flavor sundae grrrrrrrrrr!
+        </p>
+      </details>
+
+      <details class="about-accordion-item group animate__animated animate__fadeInUp animate__delay-1s">
+        <summary class="about-accordion-summary">
+          John Aron Caay
+          <span class="about-accordion-arrow">⌄</span>
+        </summary>
+        <p class="about-accordion-content animate__animated animate__fadeIn animate__delay-1s">
+          Ibabasic lang yung final assessment sa Monday. Magchachallenge ng nakapiring habang nag aassembly at installation.
+        </p>
+      </details>
+
+      <details class="about-accordion-item group animate__animated animate__fadeInUp animate__delay-2s">
+        <summary class="about-accordion-summary">
+          Mar Franklin Caraig
+          <span class="about-accordion-arrow">⌄</span>
+        </summary>
+        <p class="about-accordion-content animate__animated animate__fadeIn animate__delay-2s">
+          Kahit malabo ang aking mata... basta ikaw, malayo palang kitang kita na!
+        </p>
+      </details>
+
+      <details class="about-accordion-item group animate__animated animate__fadeInUp animate__delay-3s">
+        <summary class="about-accordion-summary">
+          Nino Joseph Agquiz
+          <span class="about-accordion-arrow">⌄</span>
+        </summary>
+        <p class="about-accordion-content animate__animated animate__fadeIn animate__delay-3s">
+          Willing mag pushup ng 1000 para sa matamis mong Oo!
+        </p>
+      </details>
+    </section>
+
+
+
   </main>
 </body>
 </html>
