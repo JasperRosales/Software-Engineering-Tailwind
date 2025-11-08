@@ -192,7 +192,6 @@
   <h1 class="ch4-section-title">Requirements Engineering</h1>
 
   <div class="ch4-grid">
-    <!-- Card 1 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         The requirements for a system are the descriptions of what the system should do—
@@ -204,7 +203,6 @@
       </p>
     </article>
 
-    <!-- Card 2 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         If a company wishes to let a contract for a large software development project,
@@ -216,7 +214,6 @@
       </p>
     </article>
 
-    <!-- Card 3 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         Some of the problems that arise during the requirements engineering process are
@@ -226,7 +223,6 @@
       </p>
     </article>
 
-    <!-- Card 4 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         1. User requirements: statements in natural language plus diagrams describing what services
@@ -237,7 +233,6 @@
       </p>
     </article>
 
-    <!-- Card 5 (full-width) -->
     <article class="ch4-card ch4-card-span-full">
       <p class="ch4-card-text">
         Different levels of requirements communicate information about the system to different types of readers.
@@ -330,32 +325,28 @@
 
 <section class="ch4-section animate__animated animate__fadeInUp">
   <h3 class="ch4-section-title text-center mb-6">
-    Figure 4.3 Types of Non-Functional Requirements
+    Types of Non-Functional Requirements
   </h3>
 
   <div class="ch4-grid">
-    <!-- Card 1 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         Hardware systems, or external factors such as safety regulations or privacy legislation. Figure 4.3 is a classification of non-functional requirements. The non-functional requirements may come from required characteristics of the software (product requirements), the organization developing the software (organizational requirements), or from external sources.
       </p>
     </article>
 
-    <!-- Card 2 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         <strong>Product requirements:</strong> These requirements specify or constrain the behavior of the software. Examples include performance requirements on how fast the system must execute and how much memory it requires, reliability requirements that set out the acceptable failure rate, security requirements, and usability requirements.
       </p>
     </article>
 
-    <!-- Card 3 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         <strong>Organizational requirements:</strong> These are broad system requirements derived from policies and procedures in the customer’s and developer’s organization. Examples include operational process requirements, programming language and development standards, and environmental requirements specifying the operating environment of the system.
       </p>
     </article>
 
-    <!-- Card 4 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         <strong>External requirements:</strong> These requirements are derived from factors external to the system and its development process. They include regulatory requirements, legislative requirements, and ethical requirements to ensure the system is acceptable to its users and the general public.
@@ -363,7 +354,6 @@
     </article>
   </div>
 
-  <!-- Image (separate, centered, responsive) -->
   <div class="max-w-3xl mx-auto mt-6">
     <img src="/src/img/ChapterFour/proc.png" 
          alt="Non-functional requirements process" 
@@ -375,49 +365,41 @@
   <h3 class="ch4-section-title">Examples of Non-Functional Requirements in the MHC-PMS</h3>
 
   <div class="ch4-grid">
-    <!-- Card 1 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         Figure 4.4 shows examples of product, organizational, and external requirements taken from the MHC-PMS whose user requirements were introduced in Section 4.1.1. The product requirement is an availability requirement that defines when the system has to be available and the allowed downtime each day. It says nothing about the functionality of MHC-PMS and clearly identifies a constraint that has to be considered by the system designers.
       </p>
     </article>
 
-    <!-- Card 2 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         The organizational requirement specifies how users authenticate themselves to the system. The health authority that operates the system is moving to a standard authentication procedure for all software where, instead of users having a login name, they swipe their identity card through a reader to identify themselves. The external requirement is derived from the need for the system to conform to privacy legislation.
       </p>
     </article>
 
-    <!-- Card 3 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         A common problem with non-functional requirements is that users or customers often propose these requirements as general goals, such as ease of use, the ability of the system to recover from failure, or rapid user response. Goals set out good intentions but cause problems for system developers as they leave scope for interpretation and subsequent dispute once the system is delivered.
       </p>
     </article>
 
-    <!-- Card 4 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         The system should be easy to use by medical staff and should be organized in such a way that user errors are minimized.
       </p>
     </article>
 
-    <!-- Card 5 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         I have rewritten this to show how the goal could be expressed as a ‘testable’ non-functional requirement. It is impossible to objectively verify the system goal, but in the description below you can at least include software instrumentation to count the errors made by users when they are testing the system.
       </p>
     </article>
-
-    <!-- Card 6 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         Medical staff shall be able to use all the system functions after four hours of training. After this training, the average number of errors made by experienced users shall not exceed two per hour of system use.
       </p>
     </article>
 
-    <!-- Card 7 -->
     <article class="ch4-card">
       <p class="ch4-card-text">
         Whenever possible, you should write non-functional requirements quantitatively so that they can be objectively tested. Figure 4.5 shows metrics that you can use to specify non-functional system properties. You can measure these characteristics.
@@ -425,7 +407,6 @@
     </article>
   </div>
 
-  <!-- Figure/Image section (separate, not a card) -->
   <div class="max-w-3xl mx-auto mt-6">
     <img src="/src/img/ChapterFour/PROPERTY.png" 
          alt="Non-functional properties" 
